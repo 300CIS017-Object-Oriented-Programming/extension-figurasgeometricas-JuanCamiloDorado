@@ -10,6 +10,7 @@
 #include "../Model/Rectangulo.h"
 #include "../Model/Rombo.h"
 #include "../Model/FiguraGeometrica.h"
+#include "../Model/Hexagono.h"
 
 class Programa {
 private:
@@ -21,8 +22,9 @@ public:
 
     void agregarFigura(int lado);
     void agregarFigura(float radio);
-    void agregarFigura(int base, int altura);
+    void agregarFigura(float base, float altura);
     void agregarFigura(int lado, int diagonalMayor,int diagonalMenor);
+    void agregarFigura(int lado, float apotema); //HEXAGONO
     void dibujarFiguras();
     void dibujarFiguras(int color); //sobrecarga del metodo para dibujar con colores
     void mostrarAreaFigura();

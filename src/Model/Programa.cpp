@@ -23,13 +23,19 @@ void Programa::agregarFigura(float radio){
     vectorFiguras.push_back(new Circulo(radio));
 }
 
-void Programa::agregarFigura(int base, int altura){
+void Programa::agregarFigura(float base, float altura){
     vectorFiguras.push_back(new Rectangulo(base, altura));
 }
 
 void Programa::agregarFigura(int lado, int diagonalMayor,int diagonalMenor){
     vectorFiguras.push_back(new Rombo(lado, diagonalMayor, diagonalMenor));
 }
+
+//HEXAGONO
+void Programa::agregarFigura(int lado, float apotema){
+    vectorFiguras.push_back(new Hexagono(lado,apotema));
+}
+
 
 void Programa::mostrarAreaFigura() {
     float area;
@@ -59,7 +65,7 @@ void Programa::mostrarPerimetroFigura() {
     float perimetro;
     for(auto & figura : vectorFiguras){
         perimetro = figura->calcularPerimetro();
-        cout << "El area del " <<  figura->getNombreFigura() << " es: " << perimetro << "\n";
+        cout << "El perimetro del " <<  figura->getNombreFigura() << " es: " << perimetro << "\n";
     }
     cout << "\n";
 }
